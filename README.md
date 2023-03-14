@@ -10,7 +10,7 @@ This motion-augmentation technique for real and/or synthetic datasets used for t
 Here's a typical workflow with the current (03/13/2023) iteration of this code:
 
 1. In a conda environment, install required dependencies using the environment.yml file as described above. Make sure you are utilizing Python 3.6 and Pytorch 1.7 or higher as well.
-2. Download a pretrained model from the below table of pretrained models. In the future, instructins will be provided to utilize a modified train.py for training a new model from scratch or training from existing pretrained models.
+2. Download a pretrained model from the below table of pretrained models. In the future, instructions will be provided to utilize a modified train.py for training a new model from scratch or training from existing pretrained models.
 3. Augment pairs of source videos and driving videos (using GPU):
 ```
 CUDA_VISIBLE_DEVICES=0 python augment_videos.py --config ./checkpoints/checkpoint_new/vox-256-spade.yaml --checkpoint ./checkpoints/checkpoint_new/00000189-checkpoint.pth.tar --source_path /path/to/source/dataset/folder --driving_path /path/to/driving/dataset/folder --augmented_path /path/to/augmented/dataset/folder/to/generate --relative --adapt_scale --dataset UBFC-rPPG
